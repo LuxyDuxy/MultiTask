@@ -19,8 +19,8 @@ def spam():
     for e in range(f):
         time.sleep(d)
         pyautogui.typewrite(a)
-        pyautogui.press('enter')    
-    clear()
+        pyautogui.press('enter')
+    start()
 
 def start():
     os.system('cls')    
