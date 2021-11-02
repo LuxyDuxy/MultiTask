@@ -20,7 +20,7 @@ def spam():
         time.sleep(d)
         pyautogui.typewrite(a)
         pyautogui.press('enter')
-    clear()
+    start()
 
 def start():
     os.system('cls')    
