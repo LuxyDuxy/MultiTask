@@ -1,0 +1,30 @@
+py -m pip install pyautogui
+py -m pip install keyboard
+python
+import os
+clear = lambda: os.system("cls")
+def spam():
+    clear()
+    import pyautogui, time
+    import keyboard
+    print('What to spam?')
+    a = input()
+    print('Delay in seconds between text:')
+    d = int(input())
+    print('How many times to spam?')
+    f = int(input())
+    print('Time in seconds before starting to spam:')
+    g = int(input())
+    time.sleep(g)
+    for e in range(f):
+        time.sleep(d)
+        pyautogui.typewrite(a)
+        pyautogui.press('enter')
+    start()
+
+def start():
+    os.system('cls')    
+    print('Welcome!')
+
+os.system('cls')    
+start()
