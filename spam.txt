@@ -19,12 +19,30 @@ def spam():
     for e in range(f):
         time.sleep(d)
         pyautogui.typewrite(a)
-        pyautogui.press('enter')
+        pyautogui.press('enter')      
     start()
 
 def start():
     os.system('cls')    
     print('Welcome!')
 
-os.system('cls')    
+def timer():
+    import pyautogui, time
+    import keyboard
+    a = 0
+    b = 0
+    c = 0
+    for h in range(9999999999):
+            clear()
+            print(c,':',b,':',a)
+            a = a + 1
+            time.sleep(1)
+            if a == 60:
+                a = 0
+                b = b + 1  
+            if b == 60:
+                b = 0
+                c = c + 1  
+
+os.system('cls')   
 start()
