@@ -1,8 +1,15 @@
+pip install pyautogui
+pip install keyboard
 py -m pip install pyautogui
 py -m pip install keyboard
 python
+
+############################################################
+
 import os
 clear = lambda: os.system("cls")
+
+############################################################ 
 
 def spam():
     clear()
@@ -10,12 +17,16 @@ def spam():
     import keyboard
     print('What to spam?')
     a = input()
+    clear()
     print('Delay in seconds between text:')
     d = int(input())
+    clear()
     print('How many times to spam?')
     f = int(input())
+    clear()
     print('Time in seconds before starting to spam:')
     g = int(input())
+    clear()
     time.sleep(g)
     for e in range(f):
         time.sleep(d)
@@ -23,14 +34,20 @@ def spam():
         pyautogui.press('enter')      
     start()
 
+############################################################ 
+
 def start():
     os.system('cls')    
     print('Welcome!')
+
+############################################################ 
 
 def opened():
     os.system('cls') 
     print('Type "help()" for the list of commands!')   
     print('Welcome!')
+
+############################################################ 
 
 def timer():
     import time
@@ -53,15 +70,21 @@ def timer():
                 c = c + 1  
     print('Done!')  
 
+############################################################ 
+
 def github():
     import webbrowser
     webbrowser.open('https://github.com/LuxyDuxy') 
     start()       
 
+############################################################
+
 def mine():
     import webbrowser
     webbrowser.open('https://miner.w3spaces.com')
     start()  
+
+################################################################################################ 
 
 def help():
     clear()
@@ -73,6 +96,8 @@ def help():
     print('mine() - go to web page that mines Monero with your CPU')
     print('time() - shows the time right now for as many seconds as you want')
     print('reminder() - reminds you of whatever you want in time you want it to remind you')
+
+################################################################################################ 
 
 def time():
     import time
@@ -91,7 +116,22 @@ def time():
         now = datetime.now()
         current_time = now.strftime("%H:%M:%S")
         print("Current Time =", current_time) 
-    print('Done!')       
+    print('Done!')  
+
+############################################################ 
+
+def randomnumber():
+    import random
+    clear()
+    print('Choose random number from:')
+    a = int(input())
+    clear()
+    print('to:')
+    b = int(input())
+    clear()
+    print(random.randint(a,b))         
+
+############################################################ 
 
 def reminder():
     clear()
@@ -112,5 +152,7 @@ def reminder():
         import winsound
         winsound.PlaySound("SystemExit", winsound.SND_ALIAS)
 
+##############################################################
+         
 os.system("cls") 
 opened()
