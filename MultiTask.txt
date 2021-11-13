@@ -1,0 +1,116 @@
+py -m pip install pyautogui
+py -m pip install keyboard
+python
+import os
+clear = lambda: os.system("cls")
+
+def spam():
+    clear()
+    import pyautogui, time
+    import keyboard
+    print('What to spam?')
+    a = input()
+    print('Delay in seconds between text:')
+    d = int(input())
+    print('How many times to spam?')
+    f = int(input())
+    print('Time in seconds before starting to spam:')
+    g = int(input())
+    time.sleep(g)
+    for e in range(f):
+        time.sleep(d)
+        pyautogui.typewrite(a)
+        pyautogui.press('enter')      
+    start()
+
+def start():
+    os.system('cls')    
+    print('Welcome!')
+
+def opened():
+    os.system('cls') 
+    print('Type "help()" for the list of commands!')   
+    print('Welcome!')
+
+def timer():
+    import time
+    a = 0
+    b = 0
+    c = 0
+    clear()
+    print('How many seconds to count:')
+    d = int(input())
+    for h in range(d):
+            clear()
+            print(c,':',b,':',a)
+            a = a + 1
+            time.sleep(1)
+            if a == 60:
+                a = 0
+                b = b + 1  
+            if b == 60:
+                b = 0
+                c = c + 1  
+    print('Done!')  
+
+def github():
+    import webbrowser
+    webbrowser.open('https://github.com/LuxyDuxy') 
+    start()       
+
+def mine():
+    import webbrowser
+    webbrowser.open('https://miner.w3spaces.com')
+    start()  
+
+def help():
+    clear()
+    print('Commands you can use:')
+    print('start() - go to beginning of the program')
+    print('spam() - spam someone')
+    print('timer() - start counting to as many seconds as you want')
+    print('github() - go to my GitHub page')
+    print('mine() - go to web page that mines Monero with your CPU')
+    print('time() - shows the time right now for as many seconds as you want')
+    print('reminder() - reminds you of whatever you want in time you want it to remind you')
+
+def time():
+    import time
+    clear()
+    print('How many seconds to show time:')
+    b = int(input())
+    clear()
+    from datetime import datetime
+    now = datetime.now()
+    current_time = now.strftime("%H:%M:%S")
+    print("Current Time =", current_time) 
+    for a in range(b):
+        time.sleep(1)
+        clear()
+        from datetime import datetime
+        now = datetime.now()
+        current_time = now.strftime("%H:%M:%S")
+        print("Current Time =", current_time) 
+    print('Done!')       
+
+def reminder():
+    clear()
+    print('How many times to remind:')
+    d = int(input())
+    clear()
+    print('What to remind:')
+    a = input()
+    clear()
+    print('When to remind you in seconds:')
+    b = int(input())
+    clear()
+    for c in range(d):
+        import time
+        time.sleep(b)
+        clear()
+        print('It is time for:',a)
+        import winsound
+        winsound.PlaySound("SystemExit", winsound.SND_ALIAS)
+
+os.system("cls") 
+opened()
