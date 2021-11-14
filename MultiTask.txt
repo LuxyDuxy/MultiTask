@@ -97,6 +97,11 @@ def help():
     print('randomnumber() - picks random number from the number you want to the other number you want')
     print('youtube() - opens youtube')
     print('mother() - asks you "Are you hungry?"')
+    print('subtraction() - trains you subtract faster')
+    print('addition() - trains you add up faster')
+    print('division() - trains you divide faster')
+    print('multiplication() - trains you multiply faster')
+    
 
 ################################################################################################ 
 
@@ -185,6 +190,201 @@ def mother():
         mother()
 
 ############################################################
+
+def subtraction():
+    import random
+    import time
+    clear()
+    print('How many tasks do you want?')
+    f = int(input())
+    clear()
+    g = 0
+    k = 0
+    l = f
+    for e in range(f):
+        a = random.randint(0, 10)
+        b = random.randint(0, a)
+        c = a - b
+        print('How much is:',a,'-',b)
+        k = k + 1
+        print('Current task:',k)
+        l = l - 1
+        print('Tasks left:',l)
+        d = int(input())
+        clear()
+        if d == c:
+            g = g + 1
+            print('Correct!')
+        else:
+            print('Wrong, the answer was:',c)    
+        time.sleep(5)
+        clear()
+    clear()
+    print('Number of points:',g,'/',f)
+    h = g / f 
+    i = h * 100
+    j = round(i)  
+    print('Percentage: ',j,'%',sep = '')
+    if j >= 90:
+        print('Your grade: A') 
+    if j >= 80 and j < 90:
+        print('Your grade: B')  
+    if j >= 70 and j < 80:
+        print('Your grade: C')
+    if j >= 60 and j < 70:
+        print('Your grade: D')
+    if j < 60:
+        print('Your grade: F')              
+
+############################################################
+
+def addition():
+    import random
+    import time
+    clear()
+    print('How many tasks do you want?')
+    f = int(input())
+    clear()
+    g = 0
+    k = 0
+    l = f
+    for e in range(f):
+        a = random.randint(0, 10)
+        b = random.randint(0, 10)
+        c = a + b
+        print('How much is:',a,'+',b)
+        k = k + 1
+        print('Current task:',k)
+        l = l - 1
+        print('Tasks left:',l)
+        d = int(input())
+        clear()
+        if d == c:
+            g = g + 1
+            print('Correct!')
+        else:
+            print('Wrong, the answer was:',c)    
+        time.sleep(5)
+        clear()
+    clear()
+    print('Number of points:',g,'/',f)
+    h = g / f 
+    i = h * 100
+    j = round(i)  
+    print('Percentage: ',j,'%',sep = '') 
+    if j >= 90:
+        print('Your grade: A') 
+    if j >= 80 and j < 90:
+        print('Your grade: B')  
+    if j >= 70 and j < 80:
+        print('Your grade: C')
+    if j >= 60 and j < 70:
+        print('Your grade: D')
+    if j < 60:
+        print('Your grade: F') 
+         
+############################################################
+
+def multiplication():
+    import random
+    import time
+    clear()
+    print('How many tasks do you want?')
+    f = int(input())
+    clear()
+    g = 0
+    k = 0
+    l = f
+    for e in range(f):
+        a = random.randint(0, 10)
+        b = random.randint(0, 10)
+        c = a * b
+        print('How much is:',a,'x',b)
+        k = k + 1
+        print('Current task:',k)
+        l = l - 1
+        print('Tasks left:',l)
+        d = int(input())
+        clear()
+        if d == c:
+            g = g + 1
+            print('Correct!')
+        else:
+            print('Wrong, the answer was:',c)    
+        time.sleep(5)
+        clear()
+    clear()
+    print('Number of points:',g,'/',f)
+    h = g / f 
+    i = h * 100
+    j = round(i)  
+    print('Percentage: ',j,'%',sep = '')
+    if j >= 90:
+        print('Your grade: A') 
+    if j >= 80 and j < 90:
+        print('Your grade: B')  
+    if j >= 70 and j < 80:
+        print('Your grade: C')
+    if j >= 60 and j < 70:
+        print('Your grade: D')
+    if j < 60:
+        print('Your grade: F')  
+         
+############################################################
+
+def division():
+    import random
+    import time
+    clear()
+    print('How many tasks do you want?')
+    f = int(input())
+    clear()
+    g = 0
+    m = 0
+    n = f
+    for e in range(f):
+        a = random.randint(10, 100)
+        b = random.randint(0, 10)
+        c = a // b
+        l = a % b
+        print('How much is:',a,':',b)
+        m = m + 1
+        print('Current task:',m)
+        n = n - 1
+        print('Tasks left:',n)
+        d = int(input())
+        clear()
+        print('What is the rest:')
+        print('Current task:',m)
+        print('Tasks left:',n)
+        k = int(input())
+        clear()
+        if d == c and k == l:
+            g = g + 1
+            print('Correct!')
+        else:
+            print('Wrong, the answer was: ',c,'and',l,'was the rest')    
+        time.sleep(5)
+        clear()
+    clear()
+    print('Number of points:',g,'/',f)
+    h = g / f 
+    i = h * 100
+    j = round(i)  
+    print('Percentage: ',j,'%',sep = '')
+    if j >= 90:
+        print('Your grade: A') 
+    if j >= 80 and j < 90:
+        print('Your grade: B')  
+    if j >= 70 and j < 80:
+        print('Your grade: C')
+    if j >= 60 and j < 70:
+        print('Your grade: D')
+    if j < 60:
+        print('Your grade: F')  
+         
+############################################################
+
          
 os.system("cls") 
 opened()
