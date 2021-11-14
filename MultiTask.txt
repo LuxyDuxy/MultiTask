@@ -94,6 +94,9 @@ def help():
     print('mine() - go to web page that mines Monero with your CPU')
     print('time() - shows the time right now for as many seconds as you want')
     print('reminder() - reminds you of whatever you want in time you want it to remind you')
+    print('randomnumber() - picks random number from the number you want to the other number you want')
+    print('youtube() - opens youtube')
+    print('mother() - asks you "Are you hungry?"')
 
 ################################################################################################ 
 
@@ -151,6 +154,37 @@ def reminder():
         winsound.PlaySound("SystemExit", winsound.SND_ALIAS)
 
 ##############################################################
+
+def youtube():
+    import webbrowser
+    webbrowser.open('https://youtube.com')
+    start()
+
+############################################################ 
+
+def mother():
+    import time
+    clear()
+    print('Are you hungry? yes/no')
+    a = input()
+    if a == 'no':
+        clear()
+        print('OK!')
+        time.sleep(1.5)
+        mother()
+    else:
+        if a == 'yes':
+            clear()
+            print('Here you go! Eat some mahune! :)')
+            time.sleep(2.5) 
+            mother()   
+    if a != 'no' or 'yes':
+        clear()
+        print('Ok, but:')
+        time.sleep(1.5)
+        mother()
+
+############################################################
          
 os.system("cls") 
 opened()
