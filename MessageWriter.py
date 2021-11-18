@@ -1,34 +1,33 @@
 import os
+import time
+from typing import NamedTuple
 clear = lambda: os.system("cls")
 import socket
 from threading import Thread
+
+print('Enter your name:')
+a = input()
 
 SERVER_HOST = "127.0.0.1"
 SERVER_PORT = 5002
 separator_token = "<SEP>"
 s = socket.socket()
-print(f"[*] Connecting to {SERVER_HOST}:{SERVER_PORT}...")
 s.connect((SERVER_HOST, SERVER_PORT))
-print("[+] Connected.")
 clear()
-
-def listen_for_messages():
-    while True:
-        message = s.recv(1024).decode()
-        print(message)
-t = Thread(target=listen_for_messages)
-t.daemon = True
-t.start()
-
+print('wait...')
+time.sleep(2)
 while True:
+    clear()
     to_send = input()
     clear()
     if to_send.lower() == 'q':
         break
-    to_send = f"{to_send}"
+    to_send = f"{a}:{to_send}"
+    print('sending...')
+    time.sleep(2)
     s.send(to_send.encode())
+    time.sleep(1)
     clear()
-
-s.close()
-
-
+    print('sent')
+    time.sleep(2)
+    clear()
