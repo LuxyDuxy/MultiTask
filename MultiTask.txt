@@ -9,10 +9,16 @@ clear = lambda: os.system("cls")
 
 ############################################################ 
 
+def secret():
+    import webbrowser
+    webbrowser.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ')
+    start()
+
+############################################################
+
 def spam():
     clear()
     import pyautogui, time
-    import keyboard
     print('What to spam?')
     a = input()
     clear()
@@ -92,7 +98,7 @@ def help():
     print('timer() - start counting to as many seconds as you want')
     print('github() - go to my GitHub page')
     print('mine() - go to web page that mines Monero with your CPU')
-    print('time() - shows the time right now for as many seconds as you want')
+    print('time() - shows the time right now')
     print('reminder() - reminds you of whatever you want in time you want it to remind you')
     print('randomnumber() - picks random number from the number you want to the other number you want')
     print('youtube() - opens youtube')
@@ -101,28 +107,19 @@ def help():
     print('addition() - trains you add up faster')
     print('division() - trains you divide faster')
     print('multiplication() - trains you multiply faster')
+    print('secret() - secret')
+    print('binarycode() - converts anything you want to binary code')
     
 
 ################################################################################################ 
 
 def time():
     import time
-    clear()
-    print('How many seconds to show time:')
-    b = int(input())
-    clear()
     from datetime import datetime
+    clear()
     now = datetime.now()
     current_time = now.strftime("%H:%M:%S")
     print("Current Time =", current_time) 
-    for a in range(b):
-        time.sleep(1)
-        clear()
-        from datetime import datetime
-        now = datetime.now()
-        current_time = now.strftime("%H:%M:%S")
-        print("Current Time =", current_time) 
-    print('Done!')  
 
 ############################################################ 
 
@@ -198,26 +195,41 @@ def subtraction():
     print('How many tasks do you want?')
     f = int(input())
     clear()
+    print('The highest number can be:')
+    n = int(input())
+    clear()
     g = 0
     k = 0
     l = f
+    m = 0
     for e in range(f):
-        a = random.randint(0, 10)
+        a = random.randint(0, n)
         b = random.randint(0, a)
         c = a - b
-        print('How much is:',a,'-',b)
         k = k + 1
-        print('Current task:',k)
         l = l - 1
+        print('Current task:',k)
         print('Tasks left:',l)
+        print('Correct answers:',g)
+        print('Wrong answers:',m)
+        print('How much is:',a,'-',b)
         d = int(input())
         clear()
         if d == c:
             g = g + 1
+            print('Current task:',k)
+            print('Tasks left:',l)
+            print('Correct answers:',g)
+            print('Wrong answers:',m)
             print('Correct!')
         else:
+            m = m + 1
+            print('Current task:',k)
+            print('Tasks left:',l)
+            print('Correct answers:',g)
+            print('Wrong answers:',m)
             print('Wrong, the answer was:',c)    
-        time.sleep(5)
+        time.sleep(3)
         clear()
     clear()
     print('Number of points:',g,'/',f)
@@ -245,26 +257,41 @@ def addition():
     print('How many tasks do you want?')
     f = int(input())
     clear()
+    print('The highest number can be:')
+    n = int(input())
+    clear()
     g = 0
     k = 0
     l = f
+    m = 0
     for e in range(f):
-        a = random.randint(0, 10)
-        b = random.randint(0, 10)
+        a = random.randint(0, n)
+        b = random.randint(0, n)
         c = a + b
-        print('How much is:',a,'+',b)
         k = k + 1
-        print('Current task:',k)
         l = l - 1
+        print('Current task:',k)
         print('Tasks left:',l)
+        print('Correct answers:',g)
+        print('Wrong answers:',m)
+        print('How much is:',a,'+',b)
         d = int(input())
         clear()
         if d == c:
             g = g + 1
+            print('Current task:',k)
+            print('Tasks left:',l)
+            print('Correct answers:',g)
+            print('Wrong answers:',m)
             print('Correct!')
         else:
+            m = m + 1
+            print('Current task:',k)
+            print('Tasks left:',l)
+            print('Correct answers:',g)
+            print('Wrong answers:',m)
             print('Wrong, the answer was:',c)    
-        time.sleep(5)
+        time.sleep(3)
         clear()
     clear()
     print('Number of points:',g,'/',f)
@@ -292,26 +319,41 @@ def multiplication():
     print('How many tasks do you want?')
     f = int(input())
     clear()
+    print('The highest number can be:')
+    n = int(input())
+    clear()
     g = 0
     k = 0
     l = f
+    m = 0
     for e in range(f):
-        a = random.randint(0, 10)
-        b = random.randint(0, 10)
+        a = random.randint(0, n)
+        b = random.randint(0, n)
         c = a * b
-        print('How much is:',a,'x',b)
         k = k + 1
-        print('Current task:',k)
         l = l - 1
+        print('Current task:',k)
         print('Tasks left:',l)
+        print('Correct answers:',g)
+        print('Wrong answers:',m)
+        print('How much is:',a,'x',b)
         d = int(input())
         clear()
         if d == c:
             g = g + 1
+            print('Current task:',k)
+            print('Tasks left:',l)
+            print('Correct answers:',g)
+            print('Wrong answers:',m)
             print('Correct!')
         else:
+            m = m + 1
+            print('Current task:',k)
+            print('Tasks left:',l)
+            print('Correct answers:',g)
+            print('Wrong answers:',m)
             print('Wrong, the answer was:',c)    
-        time.sleep(5)
+        time.sleep(3)
         clear()
     clear()
     print('Number of points:',g,'/',f)
@@ -339,32 +381,50 @@ def division():
     print('How many tasks do you want?')
     f = int(input())
     clear()
+    print('''(NEEDS TO BE HIGHER THAN 10!)
+The highest number can be:''')
+    p = int(input())
+    clear()
     g = 0
     m = 0
     n = f
+    o = 0
     for e in range(f):
-        a = random.randint(10, 100)
-        b = random.randint(0, 10)
+        a = random.randint(10, p)
+        b = random.randint(0, p)
         c = a // b
         l = a % b
-        print('How much is:',a,':',b)
         m = m + 1
-        print('Current task:',m)
         n = n - 1
-        print('Tasks left:',n)
+        print('Current task:',n)
+        print('Tasks left:',m)
+        print('Correct answers:',g)
+        print('Wrong answers:',o)
+        print('How much is:',a,':',b)
         d = int(input())
         clear()
+        print('Current task:',n)
+        print('Tasks left:',m)
+        print('Correct answers:',g)
+        print('Wrong answers:',o)
         print('What is the rest:')
-        print('Current task:',m)
-        print('Tasks left:',n)
         k = int(input())
         clear()
         if d == c and k == l:
             g = g + 1
+            print('Current task:',n)
+            print('Tasks left:',m)
+            print('Correct answers:',g)
+            print('Wrong answers:',o)
             print('Correct!')
         else:
+            o = o + 1
+            print('Current task:',n)
+            print('Tasks left:',m)
+            print('Correct answers:',g)
+            print('Wrong answers:',o)
             print('Wrong, the answer was: ',c,'and',l,'was the rest')    
-        time.sleep(5)
+        time.sleep(3)
         clear()
     clear()
     print('Number of points:',g,'/',f)
@@ -383,6 +443,34 @@ def division():
     if j < 60:
         print('Your grade: F')  
          
+############################################################
+
+def binarycode():
+    clear()
+    print('What do you want to turn into binary code?')
+    a = input()
+    clear()
+    c = ' '.join(format(ord(b), '08b') for b in a) 
+    print('"'+a+'"',"when converted to binary code is:")
+    print(str(c))
+        
+############################################################
+
+def timeschedule():
+    clear()
+    print('Number of seconds:')
+    a = int(input())
+    clear()
+    b, a = divmod(a, 60)
+    c, b = divmod(b, 60)
+    d, c = divmod(c, 24)
+    print('That is:')
+    print(d,'d ',c,'h ',b,'m ',a,'s ',sep='')
+
+############################################################
+
+
+
 ############################################################
 
          
