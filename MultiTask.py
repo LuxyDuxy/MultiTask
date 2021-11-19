@@ -1,6 +1,6 @@
-#py -m pip install pyautogui
-#py -m pip install keyboard
-#python
+pip install pyautogui
+pip install keyboard
+python
 
 ############################################################
 
