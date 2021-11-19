@@ -1,6 +1,5 @@
 import os
 import time
-from typing import NamedTuple
 clear = lambda: os.system("cls")
 import socket
 from threading import Thread
