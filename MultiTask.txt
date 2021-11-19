@@ -1,6 +1,6 @@
-pip install pyautogui
-pip install keyboard
-python
+#py -m pip install pyautogui
+#py -m pip install keyboard
+#python
 
 ############################################################
 
@@ -508,18 +508,6 @@ def messagingserver():
     
 ############################################################
 
-def messagereader():
-    import os
-    os.system("MessageReader.py")
-
-############################################################
-
-def messagewriter():
-    clear()
-    import os
-    os.system("MessageWriter.py")
-
-############################################################
          
 os.system("cls") 
 opened()
