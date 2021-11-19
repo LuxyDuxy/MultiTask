@@ -10,7 +10,7 @@ clear = lambda: os.system("cls")
 ############################################################
 
 from random import *
-def passwordcrack():
+def passwordcracking():
     import time
     import os
     clear = lambda: os.system("cls")
