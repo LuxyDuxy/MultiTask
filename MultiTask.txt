@@ -110,10 +110,7 @@ def help():
     print('secret() - secret')
     print('binarycode() - converts anything you want to binary code')
     print('messagingserver() - creates private server for messaging')
-    print('messagereader() - shows you sent messages')
-    print('messagewriter() - allows you to write messages on the private server')
     
-
 ################################################################################################ 
 
 def time():
