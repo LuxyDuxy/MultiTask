@@ -7,6 +7,38 @@ python
 import os
 clear = lambda: os.system("cls")
 
+############################################################
+
+from random import *
+def passwordcrack():
+    import time
+    import os
+    clear = lambda: os.system("cls")
+    clear()
+    print('What is your password?')
+    user_pass = input()
+    clear()
+    print('Cracking...')
+    password = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j','k', 
+                'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't','u','v', 
+                'w', 'x', 'y', 'z', '1', '2', '3', '4', '5', '6', '7',
+                'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J','K', 
+                'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T','U','V', 
+                'W', 'X', 'Y', 'Z', '8', '9', '0',]
+    guess = ""
+    a = 0
+    while (guess != user_pass):
+        guess = ""
+        for letter in range(len(user_pass)):
+            guess_letter = password[randint(0, 61)]
+            guess = guess_letter + guess
+        a = a + 1
+        b = time.process_time()
+        c = round(b)
+    clear()    
+    print("Your password is:",guess)
+    print("It taked",a,"tries and",c,"seconds to crack!")
+
 ############################################################ 
 
 def secret():
@@ -110,7 +142,10 @@ def help():
     print('secret() - secret')
     print('binarycode() - converts anything you want to binary code')
     print('messagingserver() - creates private server for messaging')
+    print('messagereader() - shows you sent messages')
+    print('messagewriter() - allows you to write messages on the private server')
     
+
 ################################################################################################ 
 
 def time():
